@@ -38,7 +38,7 @@ const start = async () => {
 
   server.route({
     method: 'GET',
-    path: 'pictures/{file*}',
+    path: '/pictures/{file*}',
     handler: {
       directory: {
         path: 'pictures/'
