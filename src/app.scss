@@ -1,0 +1,33 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+
+  .column {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    &:not(.title) {
+      cursor: pointer;
+      &:hover {
+        background: #ddd;
+      }
+    }
+    &.title {
+      background: #ddd;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+
+  img {
+    border-radius: 5px;
+    background: #eee;
+    grid-column: 1 / 7;
+    grid-row: 1 / 1;
+  }
+}
