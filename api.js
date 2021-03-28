@@ -45,7 +45,8 @@ exports.plugin = {
           output: 'stream',
           allow: 'multipart/form-data',
           multipart: true,
-          parse: true
+          parse: true,
+          maxBytes: 100485760
         }
       },
       handler: ({ payload: { picture, name } }, reply) => new Promise((resolve, reject) => {
