@@ -25,7 +25,7 @@ export default class App extends React.Component {
       <>
         {this.state.entries.length > 0 && (
           <div className='grid'>
-            {this.state.picture && <img src={`/${this.state.picture}.jpg`} alt={this.state.picture} />}
+            {this.state.picture && <img src={`/pictures/${this.state.picture}.jpg`} alt={this.state.picture} />}
             {Object.keys(this.state.entries[0]).map((name, index) => (<div className='column title' key={index}>{name}</div>))}
             {this.state.entries.map((item, current) => Object.keys(item).map((key, index) => (
               <div className='column' key={index} onClick={() => this.setPicture(current)}>
