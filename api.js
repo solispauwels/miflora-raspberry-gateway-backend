@@ -50,7 +50,7 @@ exports.plugin = {
         }
       },
       handler: ({ payload: { picture, name } }, reply) => new Promise((resolve, reject) => {
-        const file = fs.createWriteStream(`./pictures/${name}`)
+        const file = fs.createWriteStream(`./pictures/${name}.jpg`)
 
         file.on('error', error => reject(error))
 
