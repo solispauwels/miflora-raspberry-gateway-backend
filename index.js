@@ -5,7 +5,10 @@ const start = async () => {
   const server = Hapi.server({
     port: config.port,
     host: config.host,
-    tls: config.tls
+    tls: config.tls,
+    routes: {
+      cors: config.cors
+    }
   })
 
   await server.register([
@@ -16,9 +19,6 @@ const start = async () => {
       plugin: require('./api'),
       routes: {
         prefix: '/api/'
-      },
-      options: {
-        cors: true
       }
     }
   ])
