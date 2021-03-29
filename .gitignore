@@ -5,5 +5,5 @@ build
 npm-debug.log
 pictures/*
 !pictures/.gitkeep
-config.js
+./config.js
 database.db
