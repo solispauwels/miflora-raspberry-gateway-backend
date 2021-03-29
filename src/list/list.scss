@@ -1,0 +1,30 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2px;
+  margin: 0 5px;
+
+  .head, .data {
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  .head {
+    background: #ddd;
+  }
+
+  .data {
+    font-size: 15px;
+    background: #eee;
+    cursor: pointer;
+    &:hover {
+      background: #ddd;
+    }
+    small {
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}
