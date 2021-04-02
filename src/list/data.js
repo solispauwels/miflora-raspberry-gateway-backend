@@ -1,4 +1,5 @@
 import date from 'date-and-time'
+import config from '../config'
 
 const getText = (name, data) => {
   switch (name) {
@@ -8,16 +9,7 @@ const getText = (name, data) => {
   }
 }
 
-const getUnit = (name) => {
-  switch (name) {
-    case 'light': return '\nLUX'
-    case 'temperature': return '°C'
-    case 'moisture': return '%'
-    case 'conductivity': return '\nµS/cm'
-    case 'battery': return '%'
-    default: return ''
-  }
-}
+const getUnit = name => (config.labels.find(label => label.name === name) || {}).unit || ''
 
 export default ({ name, data, onSelect }) => (
   <div className='data' onClick={() => onSelect()}>

@@ -1,8 +1,10 @@
 import React from 'react'
-import config from './config'
 
 import Picture from './picture/picture'
 import List from './list/list'
+import Charts from './chart/charts'
+
+import config from './config'
 
 import './app.scss'
 
@@ -10,7 +12,10 @@ export default class App extends React.Component {
   constructor (props) {
     super(props)
 
-    this.state = { items: [], item: null }
+    this.state = {
+      items: [],
+      item: null
+    }
   }
 
   componentDidMount () {
@@ -34,6 +39,7 @@ export default class App extends React.Component {
     return (
       <>
         <Picture item={this.state.item} />
+        <Charts items={this.state.items} />
         <List items={this.state.items} onSelect={item => this.selectItem(item)} />
       </>
     )

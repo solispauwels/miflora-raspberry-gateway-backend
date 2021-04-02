@@ -1,0 +1,25 @@
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin: 10px;
+
+  .title {
+    padding: 5px;
+    font-size: 20px;
+    display: inline-flex;
+    vertical-align: middle;
+    filter: brightness(75%);
+    .label {
+      font-weight: bold;
+      text-transform: capitalize;
+      flex-grow: 1;
+    }
+    .value {
+      margin: 0 0 0 5px;
+      small {
+        opacity: 0.8;
+      }
+    }
+  }
+}
