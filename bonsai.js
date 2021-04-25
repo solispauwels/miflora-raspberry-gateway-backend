@@ -27,7 +27,7 @@ class Bonsai {
 
   select () {
     return new Promise((resolve, reject) => {
-      db.open().all('SELECT * FROM bonsai ORDER BY rowid DESC', (error, row) => error ? reject(error) : resolve(row)).close()
+      db.open().all('SELECT * FROM bonsai ORDER BY rowid DESC LIMIT 240', (error, row) => error ? reject(error) : resolve(row)).close()
     })
   }
 }

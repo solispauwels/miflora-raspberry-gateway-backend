@@ -22,7 +22,7 @@ export default ({ items }) => (
             </span>
 
           </div>
-          <Chart data={items.slice(0, 23).map(item => item[name]).reverse()} label={label} />
+          <Chart data={items.slice(0, 47).map(item => item[name]).reverse()} label={label} />
           <Bar label={label} value={first && first[name]} />
         </div>
       )
