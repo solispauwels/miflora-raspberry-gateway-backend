@@ -1,7 +1,6 @@
 *.swp
 node_modules/
 .npm/
-build
 npm-debug.log
 pictures/*
 !pictures/.gitkeep
