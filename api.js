@@ -19,7 +19,7 @@ exports.plugin = {
 
     server.route({
       method: 'PUT',
-      path: 'insert',
+      path: '/insert',
       options: {
         auth: 'simple',
         validate: {
@@ -38,7 +38,7 @@ exports.plugin = {
 
     server.route({
       method: 'POST',
-      path: 'upload',
+      path: '/upload',
       options: {
         auth: 'simple',
         payload: {
@@ -62,13 +62,13 @@ exports.plugin = {
 
     server.route({
       method: 'GET',
-      path: 'bonsai',
+      path: '/bonsai',
       handler: () => bonsai.select()
     })
 
     server.route({
       method: 'GET',
-      path: 'pictures/{file*}',
+      path: '/pictures/{file*}',
       handler: {
         directory: {
           path: 'pictures/'

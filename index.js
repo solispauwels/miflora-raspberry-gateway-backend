@@ -18,7 +18,7 @@ const start = async () => {
     {
       plugin: api,
       routes: {
-        prefix: '/api/'
+        prefix: '/api'
       }
     }
   ])
