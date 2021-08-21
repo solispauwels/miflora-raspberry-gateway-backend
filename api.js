@@ -65,5 +65,15 @@ exports.plugin = {
       path: 'bonsai',
       handler: () => bonsai.select()
     })
+
+    server.route({
+      method: 'GET',
+      path: 'pictures/{file*}',
+      handler: {
+        directory: {
+          path: 'pictures/'
+        }
+      }
+    })
   }
 }
